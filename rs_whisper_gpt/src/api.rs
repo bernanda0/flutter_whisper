@@ -90,7 +90,7 @@ pub fn run_whisper_model(path: String, lang: Option<String>) -> Vec<String> {
             panic!("expected a file at {:?}", audio_path);
         }
         // Load Base Model Weights
-        let base_model = get_resources_dir().join("ggml-base.en.bin");
+        let base_model = get_resources_dir().join("ggml-base.bin");
         let whisper_path = Path::new(&base_model);
         if !whisper_path.exists() && !whisper_path.is_file() {
             panic!("expected a whisper directory")
